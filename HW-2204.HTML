@@ -17,10 +17,6 @@
     -->
 
 
-    <!-- make title 
-    create css -->
-    
-
   </head>
   <body>
     <script>
@@ -41,12 +37,6 @@
       document.body.appendChild(bingoTitle);
 
       //append heading to body
-      
-      const hr = document.createElement("HR")
-
-      document.body.appendChild(hr));
-
-      //append hr element
 
 
       const div1 = document.createElement("div")
@@ -56,18 +46,65 @@
 
       //create div element
 
+      const bingoTable = document.createElement("table")
+      bingoTable.setAttribute("id", "bingoBoard");
+      //table for bingo
+
+      document.body.appendChild(bingoTable)
+
+        for (let x = 0; x < 4; x++) {
+
+          const bingTable = document.querySelector('table')
+
+          const tRow = document.createElement("tr")
+
+          tRow.setAttribute("id", "row" + x)
+
+          tRow.classList.add(x + "row")
+
+          // bingoTable.appendChild(tRow)
+
+          // const getTableRow = document.querySelectorAll("tr")
+
+
+        for(let a = 0; a < 19; a++) {
+
+
+          const tBox = document.createElement("td")
+
+          tBox.setAttribute("id", a)
+          
+          tRow.appendChild(tBox);
+
+        }
+
+        bingTable.appendChild(tRow); 
+      }
+
+    
+        
+
+        //addrows to table
+
+    
+      
+      //add table to body
+
+
+
+
 
     </script>
-    <!-- create table with cells 1 to 76 for loop
-    apply random number function to each table element for each load
+     <!-- create table with cells 1 to 76 for loop
+    // apply random number function to each table element for each load
 
 
 
-    create button to randomize number
+    // create button to randomize number
 
-    create check for each number loop
+    // create check for each number loop
 
-    if match change css -->
+    // if match change css -->
 
 
 
