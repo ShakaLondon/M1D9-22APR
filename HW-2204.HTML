@@ -92,16 +92,16 @@
       for (let i = 0; i < 4; i++) {
         // const rowFinder = document.querySelectorAll('tr', "row" + i )
 
+        const tableRowChild = document.querySelector("tr", "row" + i).children
+
+        console.log(tableRowChild)
+
 
         for( let d = 0; d < 19; d++) {
           const randNum = Math.floor(Math.random()*(100-1+1)+1)
 
-          let square = "'"+"#"+d+"row"+i+"'"
-          const squareFinder = square.toString()
 
-          const numFinder = document.querySelector('td', squareFinder)
-
-          numFinder.innerHTML = randNum
+          tableRowChild[d].innerHTML = randNum
           
           
         }
