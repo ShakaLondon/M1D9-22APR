@@ -72,7 +72,9 @@
 
           const tBox = document.createElement("td")
 
-          tBox.setAttribute("id", a)
+          tBox.setAttribute("id", a + "row" + x)
+
+          tBox.classList.add(x + "row")
           
           tRow.appendChild(tBox);
 
@@ -81,14 +83,61 @@
         bingTable.appendChild(tRow); 
       }
 
-    
-        
-
         //addrows to table
 
-    
-      
       //add table to body
+
+      // table rows and colums created
+
+      for (let i = 0; i < 4; i++) {
+        // const rowFinder = document.querySelectorAll('tr', "row" + i )
+
+
+        for( let d = 0; d < 19; d++) {
+          const randNum = Math.floor(Math.random()*(100-1+1)+1)
+
+          let square = "'"+"#"+d+"row"+i+"'"
+          const squareFinder = square.toString()
+
+          const numFinder = document.querySelector('td', squareFinder)
+
+          numFinder.innerHTML = randNum
+          
+          
+        }
+
+      }
+
+        
+
+// const bingTable = document.querySelector('table')
+
+// const tRow = document.createElement("tr")
+
+// tRow.setAttribute("id", "row" + x)
+
+// tRow.classList.add(x + "row")
+
+// // bingoTable.appendChild(tRow)
+
+// // const getTableRow = document.querySelectorAll("tr")
+
+
+// for(let a = 0; a < 19; a++) {
+
+
+// const tBox = document.createElement("td")
+
+// tBox.setAttribute("id", a)
+
+// tRow.appendChild(tBox);
+
+// }
+
+// bingTable.appendChild(tRow); 
+// }
+
+
 
 
 
